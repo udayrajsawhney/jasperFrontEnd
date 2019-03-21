@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Light" type="warning" [on] = "state.light" (click) = "state.light = !state.light;toggle(0, state.light);">
+      <i class="nb-lightbulb"></i>
+    </ngx-status-card>
+  </div>
+
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Roller Shades" type="success" [on] = "false" >
+      <i class="nb-roller-shades"></i>
+    </ngx-status-card>
+  </div>
+
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Fan" type="info" [on] = "state.fan"  (click) = "state.fan = !state.fan;toggle(1, state.fan);">
+      <i class="nb-loop-circled"></i>
+    </ngx-status-card>
+  </div>
+
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Lock" type="primary" [on] = "state.lock"  (click) = "state.lock = !state.lock;toggle(2, state.lock);">
+      <i class="nb-locked"></i>
+    </ngx-status-card>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-xxxl-9 col-xl-12">
+    <ngx-rooms (selec) = "changeRoom($event)"></ngx-rooms>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+    <ngx-temperature [humidity] = "humidity" [temp]= "temparature"></ngx-temperature>
+  </div>
+
+  <div class="col-xxxl-9 col-xxl-8 col-lg-7 col-md-6">
+    <ngx-electricity [speed] = "speed" [total] = "total" [which] = 'Elec'></ngx-electricity>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <ngx-electricity [speed] = "humid" [total] = "humidity" [which] = 'Hum'></ngx-electricity>
+  </div>
+  <div class="col-lg-6">
+    <ngx-electricity [speed]="tempa" [total]="temparature" [which]='Temp'></ngx-electricity>
+  </div>
+</div>
+ <div class="row">
+<div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-6">
+  <ngx-contacts></ngx-contacts>
+</div>
+  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+    <ngx-solar [chartValue]="72"></ngx-solar>
+
+    <!-- <ngx-kitten></ngx-kitten> -->
+  </div>
+
+  <!-- <div class="col-xxxl-3 col-xxl-4 col-md-5">
+    <ngx-traffic></ngx-traffic>
+    <ngx-weather></ngx-weather>
+  </div> -->
+
+  <!-- <div class="col-xxxl-6 col-xxl-12 col-md-7">
+    <ngx-security-cameras></ngx-security-cameras>
+  </div> -->
+</div>
